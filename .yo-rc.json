@@ -1,0 +1,16 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "plusBeta": false,
+    "isCreatingSolution": true,
+    "version": "1.15.2",
+    "libraryName": "meetings",
+    "libraryId": "97d1100b-0cf7-4492-a18f-f4a61a9a6890",
+    "environment": "spo",
+    "packageManager": "npm",
+    "solutionName": "meetings",
+    "solutionShortDescription": "meetings description",
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "componentType": "webpart"
+  }
+}
