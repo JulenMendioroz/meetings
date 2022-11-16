@@ -1,13 +1,15 @@
+import { ITaxField } from "../utils/taxFields"
+
 export interface IGroup {
-  code:string
-  sector: unknown
+  code: string
+  sector: string
   description?: string
-  createdAt: Date,
+  createdAt: Date
   finishedAt?: Date
   state: boolean
-  type: unknown
-  theme: unknown
-  ambit: unknown
-  country: unknown
-  string: unknown
+  type: string
+  theme: string
+  ambit: ITaxField[]
+  country: ITaxField
+  city: ITaxField
 }
