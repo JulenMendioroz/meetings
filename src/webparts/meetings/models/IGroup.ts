@@ -2,6 +2,7 @@ import { ITaxField } from "../utils/taxFields"
 
 export interface IGroup {
   code: string
+  name: string
   sector: string
   description?: string
   createdAt: Date
