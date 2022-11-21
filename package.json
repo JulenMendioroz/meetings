@@ -20,6 +20,7 @@
     "office-ui-fabric-react": "7.185.7",
     "react": "16.13.1",
     "react-dom": "16.13.1",
+    "react-router-dom": "^6.4.3",
     "spfx-fast-serve": "^3.0.5",
     "tslib": "2.3.1"
   },
@@ -36,7 +37,7 @@
     "ajv": "^6.12.5",
     "eslint-plugin-react-hooks": "4.3.0",
     "gulp": "4.0.2",
-    "typescript": "4.5.5",
-    "spfx-fast-serve-helpers": "~1.15.0"
+    "spfx-fast-serve-helpers": "~1.15.0",
+    "typescript": "4.5.5"
   }
 }
