@@ -21,6 +21,7 @@ export default class MeetingsWebPart extends BaseClientSideWebPart<IMeetingsWebP
     const element: React.ReactElement<IMeetingsProps> = React.createElement(
       Meetings,
       {
+        context: this.context,
         description: this.properties.description,
       }
     );
