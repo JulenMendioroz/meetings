@@ -1,6 +1,7 @@
-import { ITaxField } from "../utils/taxFields"
+// import { ITaxField } from "../utils/taxFields"
 
 export interface IGroup {
+  id: number,
   code: string
   name: string
   sector: string
@@ -10,7 +11,7 @@ export interface IGroup {
   state: boolean
   type: string
   theme: string
-  ambit: ITaxField[]
-  country: ITaxField
-  city: ITaxField
+  // ambit: ITaxField[]
+  // country: ITaxField
+  // city: ITaxField
 }

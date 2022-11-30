@@ -3,8 +3,8 @@ import * as ReactDom from "react-dom";
 import { BaseClientSideWebPart } from "@microsoft/sp-webpart-base";
 import { Version } from "@microsoft/sp-core-library";
 
-import { IMeetingsProps } from "./components/IMeetingsProps";
-import Meetings from "./components/Meetings";
+import { IMeetingsProps } from "./ui/IMeetingsProps";
+import Meetings from "./ui/Meetings";
 import { setContext } from "../../spConfig";
 
 export default class MeetingsWebPart extends BaseClientSideWebPart<void> {
