@@ -1,3 +1,4 @@
+import { MessageBar, MessageBarType } from "office-ui-fabric-react";
 import * as React from "react";
 import { useParams } from "react-router-dom";
 import { IGroup } from "../../../models/IGroup";
@@ -10,25 +11,26 @@ export function Edit(): React.ReactElement {
   const [loading, setLoading] = React.useState<boolean>(true);
   const [error, setError] = React.useState<string>("");
 
-  const setIsNotNumericIDError = (): void =>
-    setError(`Error: ID should be a number`);
-
-  const setGroupIDDoesNotExistError = (): void =>
-    setError(`Error: group with ID: ${id} does not exist`);
-
   React.useEffect(() => {
     const _id = Number(id);
     if (Number.isNaN(_id)) {
-      setIsNotNumericIDError();
+      setError(`Error: ID should be a number`);
+      setLoading(false);
+      return;
     }
     groupService
       .getById(_id)
       .then(setGroup)
-      .catch(() => setGroupIDDoesNotExistError())
+      .catch(() => setError(`Error: group with ID: ${id} does not exist`))
       .finally(() => setLoading(false));
   }, []);
 
   if (loading) return <p>Loading...</p>;
-  if (error) return <p>{error}</p>;
-  return <GroupForm isEditable={true} onSubmit={groupService.create} />;
+  if (error)
+    return (
+      <MessageBar messageBarType={MessageBarType.error}>{error}</MessageBar>
+    );
+  return (
+    <GroupForm isEditable={true} onSubmit={groupService.update} group={group} />
+  );
 }

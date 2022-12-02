@@ -1,23 +1,25 @@
 import type { IDropdownOption } from "office-ui-fabric-react";
 import type { IPickerTerms } from "@pnp/spfx-controls-react";
 
+import type { IGroup } from "../../../models/IGroup";
+
 export interface IGroupFormState {
+  id?: number;
   code: string;
   sector?: IDropdownOption;
   name: string;
   description: string;
   createdAt: string;
   finishedAt: string;
-  state: true;
+  state: boolean;
   type?: IDropdownOption;
   theme?: IDropdownOption;
-  ambit: IPickerTerms;
   country: IPickerTerms;
   city: IPickerTerms;
 }
 
 export interface IGroupFormProps {
-  initialForm?: IGroupFormState;
+  group?: IGroup;
   isEditable?: boolean;
-  onSubmit?: (form: IGroupFormState) => void;
+  onSubmit?: (form: IGroup) => void;
 }

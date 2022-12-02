@@ -11,6 +11,7 @@ export function GroupList(): React.ReactElement {
   }, []);
 
   // return <pre>{JSON.stringify(groups, null, 2)}</pre>;
+  // console.log(groups)
   return (
     <ul>
       {groups.map(({ id, name }) => (
